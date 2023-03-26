@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Card Example</title>
+  <style>
+    .card {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid black;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .card div {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card-container"></div>
+
+  <script>
+
+
+
+
+ 
+
+//  data = [ 
+
+//       ['Robin', '18', '912345678', '台中市大里區無敦區蹲1號'],
+//       ['Allen', '19', '912345679', '台北市信義區曉變區梅2號'],
+//       ['Nana', '20', '912345680', '台中市大里區無敦區蹲3號'],
+//       ['Gigi', '21', '912345681', '台北市信義區曉變區梅4號'],
+//       ['Banana', '22', '912345682', '台中市大里區無敦區蹲5號'],
+//       ['Apple', '18', '912345683', '台北巾信義品暖愛品栂6號'],
+//       ['Kaboka', '19', '912345684', '台北市信義區曉變區梅7號'],
+//       ['Labala', '21', '912345685', '台北市信義區曉變區梅8號']
+//     ];
+
+
+    const cardContainer = document.querySelector('.card-container');
+
+    data.forEach(item => {
+      const card = document.createElement('div');
+      card.className = 'card';
+
+      const name = document.createElement('div');
+      name.textContent = `Name: ${item[0]}`;
+      card.appendChild(name);
+
+      const age = document.createElement('div');
+      age.textContent = `Age: ${item[1]}`;
+      card.appendChild(age);
+
+      const phone = document.createElement('div');
+      phone.textContent = `Phone: ${item[2]}`;
+      card.appendChild(phone);
+
+      const address = document.createElement('div');
+      address.textContent = `Address: ${item[3]}`;
+      card.appendChild(address);
+
+      cardContainer.appendChild(card);
+    });
+  </script>
+</body>
+</html>
